@@ -1,0 +1,38 @@
+﻿<Window x:Class="DofusMissions.Icono"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DofusMissions"
+        mc:Ignorable="d"
+        Title="Icono" Height="55" Width="47"
+        AllowsTransparency="True"
+        WindowStyle="None" ResizeMode="NoResize"
+        PreviewMouseMove="OnPreviewMouseMove"
+        MouseLeftButtonUp="OnMouseLeftButtonUp"
+        Cursor="Hand"
+        Closed="Window_Closed" Closing="Window_Closing">
+    <Window.Resources>
+        <local:BooleanToColorConverter x:Key="BooleanToColorConverter"/>
+        <local:BooleanToFontStyleConverter x:Key="BooleanToFontStyleConverter"/>
+        <local:BooleanToImageSourceConverter x:Key="BooleanToImageSourceConverter"/>
+        <Style x:Key="NoIconMenuItemStyle" TargetType="MenuItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="MenuItem">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter Content="{TemplateBinding Header}" Margin="6,3,6,3"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Otros recursos -->
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/icono.png" Stretch="Uniform"/>
+    </Window.Background>
+</Window>
+
+    
+  
